@@ -1,0 +1,11 @@
+*.pyc
+.ipynb_checkpoints/
+target/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+local.conf
+dependency-reduced-pom.xml
+output/*
