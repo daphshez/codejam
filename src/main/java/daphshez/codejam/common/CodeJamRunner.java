@@ -56,6 +56,9 @@ public class CodeJamRunner
                 System.out.println("Result different from expected :-(");
             }
         }
+
+        System.out.println("\n\nI was running " + solver.getClass().getSimpleName());
+        System.out.println("on " +  contest + " - " + problem + " - " + stage);
     }
 
 }

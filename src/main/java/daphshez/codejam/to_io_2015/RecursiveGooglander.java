@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.function.Function;
 
-// recursive solution for problem D
+// recursive solution for problem D https://code.google.com/codejam/contest/9214486/dashboard#s=p3
 // too slow for the large input
 // could probably be optimised by dropping the visited list and using reducing the board size correctly
 
