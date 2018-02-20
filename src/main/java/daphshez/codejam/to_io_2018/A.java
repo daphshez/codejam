@@ -16,7 +16,7 @@ public class A implements Function<CodeJamCase, CodeJamSolution>
 {
     @Override
     public CodeJamSolution apply(CodeJamCase codeJamCase) {
-        List<Long> values = codeJamCase.asListOfIntegers();
+        List<Long> values = codeJamCase.asListOfNumbers(0);
         Collections.sort(values);
 
         long distance = 0;
