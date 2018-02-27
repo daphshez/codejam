@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.function.Function;
 
-// recursive solution for problem D https://code.google.com/codejam/contest/9214486/dashboard#s=p3
+// recursive solution for problem NativeTrickyTrios https://code.google.com/codejam/contest/9214486/dashboard#s=p3
 // too slow for the large input
 // could probably be optimised by dropping the visited list and using reducing the board size correctly
 
@@ -116,7 +116,7 @@ public class RecursiveGooglander implements Function<CodeJamCase, CodeJamSolutio
         CodeJamRunner.run(new FixedLengthCaseReader(),
                 clazz.newInstance(),
                 "to_io_2015",
-                "D",
+                "NativeTrickyTrios",
                 args[0]);
 
 

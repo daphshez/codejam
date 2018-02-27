@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
-// Linear programming solution from problem D https://code.google.com/codejam/contest/9214486/dashboard#s=p3
+// Linear programming solution from problem NativeTrickyTrios https://code.google.com/codejam/contest/9214486/dashboard#s=p3
 // Fast enough to solve large input
 
 // if r == 1 or c == 1, RecursiveGooglander(r, c) = 1
@@ -63,7 +63,7 @@ public class LinearProgrammingGooglander implements Function<CodeJamCase, CodeJa
         CodeJamRunner.run(new FixedLengthCaseReader(),
                 clazz.newInstance(),
                 "to_io_2015",
-                "D",
+                "NativeTrickyTrios",
                 args[0]);
 
         System.out.println(clazz.getSimpleName());
