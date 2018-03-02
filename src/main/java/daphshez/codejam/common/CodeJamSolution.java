@@ -11,6 +11,12 @@ public class CodeJamSolution
         this.line = line;
     }
 
+    public CodeJamSolution(int counter, double value)
+    {
+        this.counter = counter;
+        this.line = String.format("%.6f", value);
+    }
+
     public int getCounter()
     {
         return counter;

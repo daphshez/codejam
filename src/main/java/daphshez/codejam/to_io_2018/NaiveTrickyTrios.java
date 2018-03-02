@@ -12,14 +12,14 @@ import static org.apache.commons.math3.util.CombinatoricsUtils.factorial;
  * Generates all possible boards, and runs optimal strategy on each board. Equivalent boards not used (i.e. 000111 and 111000).
  * Run time is ~0.5 second on my machine for n=5.
  */
-public class NativeTrickyTrios
+public class NaiveTrickyTrios
 {
     private int n;
     private int[] board;
     private int boardsGenerated;
     private long totalSolutions;
 
-    public NativeTrickyTrios(int n)
+    public NaiveTrickyTrios(int n)
     {
         this.n = n;
         board = new int[n * 3];
@@ -72,17 +72,17 @@ public class NativeTrickyTrios
         while (removed < n) {
             r += 1;
 
-            if (known[board[next]] == 2) {  // Cards are A??, and we know the locations of the other two A's
+            if (known[board[next]] == 2) {  // (1) Cards are A??, and we know the locations of the other two A's
                 removed += 1;
                 next += 1;
             } else if (board[next] == board[next + 1]) {  // Cards are AA?, and...
-                if (known[board[next]] == 1) {  // we know the location of the other A
+                if (known[board[next]] == 1) {  // (2) we know the location of the other A
                     removed += 1;
                     next += 2;
-                } else if (board[next] == board[next + 2]) {// cards are AAA
+                } else if (board[next] == board[next + 2]) {// (3) cards are AAA
                     removed += 1;
                     next += 3;
-                } else {    // cards are AAB and we still don't know where the 3rd A is
+                } else {    // (4) cards are AAB and we still don't know where the 3rd A is
                     int B = board[next + 2];
                     known[board[next]] += 2;
                     known[B] += 1;
@@ -124,7 +124,7 @@ public class NativeTrickyTrios
     public static void main(String[] args) throws IOException, IllegalAccessException, InstantiationException
     {
         IntStream.of(1, 2, 3, 4, 5)
-                .forEach(i -> System.out.println(i + " -> " + (new NativeTrickyTrios(i).run())));
+                .forEach(i -> System.out.println(i + " -> " + (new NaiveTrickyTrios(i).run())));
 
     }
 
